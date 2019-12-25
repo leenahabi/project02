@@ -1,0 +1,12 @@
+<div class="forms">
+<h3> Questions : <h3>
+<table>
+<col width="430">
+<% @question.each do |question| %>
+<tr>
+<td><%=question.question%></td>
+<td><%= link_to 'Answer' , new_answer_path , :class=>"btn btn-light"%></td>
+</tr>
+<%end%>
+</table>
+</div>

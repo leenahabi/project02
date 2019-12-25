@@ -9,7 +9,156 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
+ *4F345A colr purple
+ A7B3A5 greensh grey
+ FAFFEC light yellow
  *= require_tree .
  *= require_self
  */
+#by {
+    text-align: center;
+    font-family: 'Baskervville', serif;
+}
+h2 ,h3 ,h3 ,h4 {
+    font-family: 'Baskervville', serif;
+}
+body{
+display: flex;
+flex-direction: column;
+justify-content: center;
+/* background-color: #eff3e8; */
+background-color:#e8f8f9;
+}
+pre {
+    font-family: 'Times New Roman', Times, serif;
+    overflow-x: auto;
+ white-space: pre-wrap;
+ white-space: -moz-pre-wrap !important;
+ white-space: -pre-wrap;
+ white-space: -o-pre-wrap;
+ word-wrap: break-word;
+ padding: 0 10px;
+}
+h1 {
+    text-align: center;
+}
+header {
+    /*background-color: #93C48B ; */
+    background-color: #31352E;
+    text-align: center;
+    padding: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    color: #AFCCA9;
+    border-bottom: 5px solid #AFCCA9 ;
+}
+.change-my-color {
+    filter: invert(93%) sepia(12%) saturate(558%) hue-rotate(56deg) brightness(86%) contrast(85%);
+  }
+.filter-img {
+    filter: invert(56%) sepia(7%) saturate(153%) hue-rotate(325deg) brightness(86%) contrast(83%);
+}
+header a{
+    color : #AFCCA9;
+}
+header a:hover {
+    text-decoration: none;
+    color: #AFCCA9;
+   }
+   header h1{
+    align-self: center;
+}
+h1 {
+    font-family: 'Pacifico', cursive;
+}
+.banner{
+display: flex;
+flex-direction: column;
+padding-right: 30px;
+}
+.recipe {
+   align-self: center;
+   flex-flow: nowrap;
+   width: 76%;
+   font-size: 20px;
+   padding: 10px 80px;
+   background-color: white;
+   border-radius: 25px;
+
+}
+.bg{
+    padding: 10px 80px;
+    background-color: white;
+    border-radius: 25px;
+}
+.maincon {
+    align-self: center;
+    font-size: 20px;
+    padding: 0 80px;
+ }
+.forms {
+    align-self:center;
+    text-align: center;
+    padding: 10px 80px;
+   background-color: white;
+   border-radius: 25px;
+ }
+ .cforms {
+    align-self:center;
+    text-align: center;
+    width: 76%;
+    justify-content: space-between;
+ }
+.imgtotext {
+    display: flex;
+    justify-content: space-around;
+}
+.imgg {
+height: 400px;
+width: auto;
+max-width: 500px;
+border: 1px solid wheat;
+}
+a {
+    text-decoration: none;
+}
+.card-img-top {
+height: 290px;
+width: 290px;
+align-self: center;
+padding: 8px;
+
+}
+.card {
+    text-align: center;
+    width: 300px;
+     background-color: white;
+    margin: 10px;
+    color: black;
+    border-radius:25px;
+}
+.btn-light {
+    background-color: #A7B3A5;
+    border: none;
+    margin: 2px;
+    color : white;
+    min-width: 80px;
+}
+.newbtn{
+    background-color: #A7B3A5;
+    border: none;
+    color: black;
+    border-radius:5px;
+    margin: 10px;
+    padding: 5px;
+}
+.btn-secondary {
+    background-color: #FAFFEC;
+    border: none;
+    color: black;
+    margin: 5px;
+}
+.btn-dark {
+min-width: 70px;
+}

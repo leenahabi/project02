@@ -1,0 +1,35 @@
+
+<div class="forms">
+<h1> Add New Recipe </h1>
+<br>
+<%= form_for @recipe, url: {action: "create"} do |f| %>
+   <table>
+   <tr>
+    <td><%= f.label  :title , 'Title : '%></td>
+    <td><%=f.text_field :title , size: "80" %></td>
+    </tr>
+    <tr>
+    <td><%= f.label  :Category, 'Category : '%></td>
+    <td><%=f.text_field :category ,size: "80"%></td>
+    </tr>
+    <tr>
+    <td><%= f.label  :Ingredients , 'Ingredients : '%></td>
+    <td><%=f.text_area :ingredients , placeholder: "please put each ingredient on it's on line",size: "80x10" %></td>
+    </tr>
+    <tr>
+    <td><%= f.label :Directions  , 'Directions : '%></td>
+    <td><%=f.text_area :directions, placeholder: "please put each step on it's on line", size: "80x10" %></td>
+    </tr>
+    <tr>
+    <td><%= f.label :Notes , 'Notes : '%></td>
+    <td><%=f.text_area :notes , size: "80x5" %></td>
+    </tr>
+    <tr>
+    <td><%= f.label :image , 'Image : '%></td>
+    <td><%=f.text_field :image , size: "80"%></td>
+    </tr>
+    </table><br>
+   <%= f.submit "Submit" , :class =>"btn btn-dark"%> 
+<% end %>
+</div>
+<br>

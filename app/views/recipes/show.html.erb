@@ -1,0 +1,55 @@
+
+<div class="recipe">
+<h1><%=@recipe.title%></h1>
+<p id="by">By: <%=@userr.name%></p>
+<hr>
+<h3> Ingredients:</h3>
+<div class="imgtotext">
+<pre>
+<%=@recipe.ingredients%></pre>
+<br>
+<img src=<%=@recipe.image%> class ="imgg">
+</div>
+<hr>
+<h3> Directions :</h3>
+<pre><%=@recipe.directions%></pre>
+<hr>
+<h3>Notes : </h3>
+<pre><%=@recipe.notes%></pre>
+</div>
+<hr>
+<div class="cforms">
+<% if(@user == @userr)%>
+<%= link_to 'Delete', @recipe, method: :delete, data: { confirm: 'Are you sure?' } , :class =>"btn btn-dark" %>
+<%= link_to "Edit" , edit_recipe_path , :class =>"btn btn-dark"%>
+<%# <%= link_to 'Your recipes', recipes_path , :class =>"btn btn-dark" %> 
+<br>
+<%else%> <%= link_to 'Back to recipes', root_path , :class =>"btn btn-dark" %><br>
+<%end%>
+<br>
+<% if @recipe.questions.exists? %>
+<div class="bg">
+<h4> Comments :</h4>
+<% @recipe.questions.each do |question| %>
+<hr>
+<strong><%= question.user.name%>:</strong><%= question.question%>
+<%if user_signed_in?%>
+ <% if (current_user.id == question.user_id)%>
+<%= link_to [question.recipe, question] , method: :delete , data: { confirm: 'Are you sure?' } do %>
+<%= image_tag "eraser-solid.svg", alt:"erase",size:"13x13"%></p>
+<%end%>
+<%end%>
+<%end%>
+<%end%>
+</div>
+<%end%>
+<br>
+<%= form_with(model:[@recipe, @recipe.questions.build], local: true) do |f| %>
+<%# <td> <%= f.hidden_field :recipe_id, question.recipe.id %>
+<h5> add a comment :<h5>
+<%=f.text_area :question, size: "50x2" %><br>
+ <%= f.submit "Submit" , :class =>"btn btn-dark"%>
+ <%end%>
+ </div>
+ <br>
+ 
