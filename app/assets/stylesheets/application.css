@@ -129,6 +129,7 @@ a {
 textarea {
     border-radius: 5px;
     border-color: lightgrey;
+    line-height: 1.6;
 }
 .card {
     text-align: center;
