@@ -35,7 +35,10 @@ class RecipesController < ApplicationController
     redirect_to recipes_path
   end
 
-
+def profile
+  @user = User.find(params[:id])
+  @recipe = Recipe.where(user_id:@user)
+end 
   private
   def set_recipe
     @recipe = Recipe.find(params[:id])

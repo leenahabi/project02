@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "home#index"
+  get 'recipe/:id/profile/:id', to: 'recipes#profile' ,as: "recipe_profile"
   resources :recipes do
     resources :questions 
    end

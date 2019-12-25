@@ -4,7 +4,7 @@
     <title>Project02</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="shortcut icon" type="image/svg" href="/Users/lina/Desktop/sei/projects/project-02/app/assets/images/utensils-solid.svg"/>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Baskervville&display=swap" rel="stylesheet">
     <style>@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');</style>
@@ -18,19 +18,17 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
 <header>
-<h1><%= link_to 'Green Recipes', root_path%> <%= image_tag "utensils-solid.svg", size: "30x30" , :class=>"change-my-color" %></h1>   
+<h1><%= link_to 'Green Recipes', root_path%> <%= image_tag "utensils-solid.svg", size: "40x40" , :class=>"change-my-color" %></h1>   
 <div class = "banner">
 <% if(user_signed_in?)%>
-<strong> Hi <%=@user.name%><%= image_tag"kitchen-pack-cooking-svgrepo-com (2).svg", size: "15x25", :class=>"change-my-color"%></strong>
+<strong> Hi <%=@user.name%> <%= image_tag"22-222336_hat-moustache-avatar-svg-chef-hat-logo-png.png", size: "25x30", :class=>"change-my-color"%></strong>
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-    Account
-  </button>
-<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-<li><%= link_to "Sign out" , destroy_user_session_path , method: :delete , :class =>"dropdown-item"%></li>
-<li><%= link_to " Your Recipes" , recipes_path ,:class =>"dropdown-item" %></li>
-<li><%= link_to " update account" , edit_user_registration_path ,:class =>"dropdown-item" %></li>
-</ul>
+  <button class="dropbtn">Account</button>
+  <div class="dropdown-content">
+  <%= link_to " Your Recipes" , recipes_path ,:class =>"dropdown-item" %>
+ <%= link_to "Sign out" , destroy_user_session_path , method: :delete , :class =>"dropdown-item"%>
+<%= link_to " update account" , edit_user_registration_path ,:class =>"dropdown-item" %>
+  </div>
 </div>
 <%else%> 
 <%=link_to "Sign in" , new_user_session_path, :class => "btn btn-secondary"%>
