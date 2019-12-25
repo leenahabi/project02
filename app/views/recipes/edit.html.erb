@@ -4,11 +4,11 @@
  <table>
    <tr>
     <td><%= f.label  :title , 'Title : '%></td>
-    <td><%=f.text_field :title , size: "80" %></td>
+    <td><%=f.text_area :title , size: "80x1" %></td>
     </tr>
     <tr>
     <td><%= f.label  :Category, 'Category : '%></td>
-    <td><%=f.text_field :category ,size: "80"%></td>
+    <td><%=f.text_area :category ,size: "80x1"%></td>
     </tr>
     <tr>
     <td><%= f.label  :Ingredients , 'Ingredients : '%></td>
@@ -24,7 +24,7 @@
     </tr>
     <tr>
     <td><%= f.label :image , 'Image : '%></td>
-    <td><%=f.text_field :image , size: "80"%></td>
+    <td><%=f.text_area :image , size: "80x1"%></td>
     </tr>
     </table><br>
    <%= f.submit "Submit" , :class => "btn btn-light"%> 

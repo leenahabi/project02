@@ -8,7 +8,11 @@
 <pre>
 <%=@recipe.ingredients%></pre>
 <br>
+<%if @recipe.image.present?%>
 <img src=<%=@recipe.image%> class ="imgg">
+<%else%>
+<%= image_tag "cooking-svgrepo-com.svg", :class =>"imgg"%>
+<%end%>
 </div>
 <hr>
 <h3> Directions :</h3>
@@ -28,19 +32,33 @@
 <%end%>
 <br>
 <% if @recipe.questions.exists? %>
-<div class="bg">
-<h4> Comments :</h4>
-<% @recipe.questions.each do |question| %>
-<hr>
-<strong><%= question.user.name%>:</strong><%= question.question%>
-<%if user_signed_in?%>
- <% if (current_user.id == question.user_id)%>
-<%= link_to [question.recipe, question] , method: :delete , data: { confirm: 'Are you sure?' } do %>
-<%= image_tag "eraser-solid.svg", alt:"erase",size:"13x13"%></p>
-<%end%>
-<%end%>
-<%end%>
-<%end%>
+    <div class="bg">
+    <h4> Questions :</h4>
+        <% @recipe.questions.each do |question| %>
+        <hr>
+        <p><strong><%= question.user.name%>:</strong><%= question.question%>
+            <%if user_signed_in?%>
+                <% if (current_user.id == question.user_id)%>
+                    <%= link_to [question.recipe, question] , method: :delete , data: { confirm: 'Are you sure?' } do %>
+                        <%= image_tag "eraser-solid.svg", alt:"erase",size:"13x13"%></p>
+                        <%end%>
+                <%end%>
+                <%if(current_user.id == @recipe.user_id)%>
+                <% if question.answers.exists? %>
+                    <% question.answers.each do |answer| %>
+                         <p><strong><%= answer.user.name%>:</strong>
+                         <%=answer.answer%>
+                         <% if (current_user.id == answer.user_id)%>
+                    <%= link_to [answer.question, answer] , method: :delete , data: { confirm: 'Are you sure?' } do %>
+                        <%= image_tag "eraser-solid.svg", alt:"erase",size:"13x13"%></p>
+                        <%end%><%end%></p>
+                        <%end%>
+                        <%else%>
+                      <p><%= link_to 'Answer', new_question_answer_path(question) , :class =>"btn btn-dark" %></p>
+                    <%end%>
+                <%end%>
+            <%end%>
+        <%end%>
 </div>
 <%end%>
 <br>

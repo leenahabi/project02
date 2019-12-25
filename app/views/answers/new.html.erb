@@ -1,8 +1,12 @@
 
+<div class="forms">
+<br>
+<%# <h3><%=@recipe.title%></h3> 
 <h3><%=@question.question%></h3>
-<%= form_with(model:[@question, @recipe.question.answer.build], local: true) do |f| %>
-<%# <td> <%= f.hidden_field :recipe_id, question.recipe.id %>
-<h5> add a comment :<h5>
+<br>
+<%= form_with(model:[@question, @question.answers.build ], local: true)do |f| %>
+<h5> Answer :<h5>
 <%=f.text_area :answer, size: "50x2" %><br>
  <%= f.submit "Submit" , :class =>"btn btn-dark"%>
  <%end%>
+ </div>
