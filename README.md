@@ -5,7 +5,7 @@ A Web Application using ruby on rails to let users view ,create , edit and delet
 
 --- 
 ## My Project Deployment 
-This is a link to the game
+This is a link to the application
 [Green Recipes]()
 ## Technologies used in the project
 1. Rails
@@ -27,12 +27,11 @@ This is a link to the game
 10. The user will be able to answer the question on his posts and delete them. 
 
 # ERD
-[ERD](https://drive.google.com/drive/my-drive)
+[ERD](https://drive.google.com/file/d/1Mb6rByq6odi0hlDADz3u-50UIBSznKca/view)
 
 # Wireframes :
-[main page wireframe](https://drive.google.com/drive/my-drive)
-
-[single recipe wireframe](https://drive.google.com/drive/my-drive)
+[main page wireframe](https://drive.google.com/file/d/1hu2UJP0LJ9gmphmFJ_wW8r58b8nPXHfi/view) 
+single page (https://drive.google.com/file/d/1wioFeukCWunqkhhqOLySSDWTJVVKxF-Q/view)
 --- 
 ## Planning and Development Process
 
