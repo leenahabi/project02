@@ -26,6 +26,7 @@
   <button class="dropbtn">Account</button>
   <div class="dropdown-content">
   <%= link_to " Your Recipes" , recipes_path ,:class =>"dropdown-item" %>
+  <%= link_to 'New recipe' , new_recipe_path , :class=>"dropdown-item"%>
  <%= link_to "Sign out" , destroy_user_session_path , method: :delete , :class =>"dropdown-item"%>
 <%= link_to " update account" , edit_user_registration_path ,:class =>"dropdown-item" %>
   </div>

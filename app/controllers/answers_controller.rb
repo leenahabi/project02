@@ -3,7 +3,6 @@ class AnswersController < ApplicationController
     before_action :authenticate_user! , only: [:new ,:destroy, :create]
         def index
             @user = current_user
-        
             @question = Question.where(recipe_id: @recipe)
         end
  
@@ -17,7 +16,7 @@ class AnswersController < ApplicationController
             @answer = @question.answers.create(a_params)
             @answer.user = current_user
             @answer.save
-            redirect_to recipes_path
+            redirect_back(fallback_location: root_path)
           end
       
           def destroy

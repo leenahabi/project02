@@ -36,7 +36,7 @@
     <h4> Questions :</h4>
         <% @recipe.questions.each do |question| %>
         <hr>
-        <p class="sb"><span><strong><%= question.user.name%>:  </strong><%= question.question%></span>
+        <p class="sb"><span style="padding-right:10px;"><strong style="font-size:18px;"><%= question.user.name%>:  </strong><%= question.question%></span>
             <%if user_signed_in?%>
                 <% if (current_user.id == question.user_id)%>
                     <%= link_to [question.recipe, question] , method: :delete , data: { confirm: 'Are you sure?' } do %>
@@ -46,7 +46,7 @@
                 <%if(current_user.id == @recipe.user_id)%>
                 <% if question.answers.exists? %>
                     <% question.answers.each do |answer| %>
-                         <p class="sb"><span><strong><%= answer.user.name%>:</strong>
+                         <p class="sb"><span style="padding-left:10px;padding-left:60px;"><strong style="font-size:18px;"><%= answer.user.name%>:</strong>
                          <%=answer.answer%></span>
                          <% if (current_user.id == answer.user_id)%>
                     <%= link_to [answer.question, answer] , method: :delete , data: { confirm: 'Are you sure?' } do %>
@@ -54,8 +54,12 @@
                         <%end%><%end%></p>
                         <%end%>
                         <%else%>
-                      <p><%= link_to 'Answer', new_question_answer_path(question) , :class =>"btn btn-dark" %></p>
-                    <%end%>
+                        <%= form_with(model:[question, question.answers.build ], local: true)do |f| %>
+                        <h5> Answer :<h5>
+                        <%=f.text_area :answer, size: "70x3" %><br>
+                        <%= f.submit "Answer" , :class =>"btn btn-dark"%>
+                        <%end%>
+                        <%end%>
                 <%end%>
             <%end%>
         <%end%>
@@ -65,7 +69,7 @@
 <%= form_with(model:[@recipe, @recipe.questions.build], local: true) do |f| %>
 <%# <td> <%= f.hidden_field :recipe_id, question.recipe.id %>
 <h5> Have A Question ?<h5>
-<%=f.text_area :question, size: "50x2" %><br>
+<%=f.text_area :question, size: "70x4" %><br>
  <%= f.submit "Submit" , :class =>"btn btn-dark"%>
  <%end%>
  </div>
