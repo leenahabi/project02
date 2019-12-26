@@ -26,10 +26,10 @@ This is a link to the application
 9. The user user will be able to ask questions on each recipe post and delete them.
 10. The user will be able to answer the question on his posts and delete them. 
 
-# ERD
+### ERD
   [erd] (https://drive.google.com/file/d/1Mb6rByq6odi0hlDADz3u-50UIBSznKca/view),
  ---
-# Wireframes :
+### Wireframes :
 [main page wireframe](https://drive.google.com/file/d/1hu2UJP0LJ9gmphmFJ_wW8r58b8nPXHfi/view) ,
 
 [single page] (https://drive.google.com/file/d/1wioFeukCWunqkhhqOLySSDWTJVVKxF-Q/view)
