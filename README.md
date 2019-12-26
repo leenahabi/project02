@@ -27,11 +27,12 @@ This is a link to the application
 10. The user will be able to answer the question on his posts and delete them. 
 
 # ERD
-[ERD](https://drive.google.com/file/d/1Mb6rByq6odi0hlDADz3u-50UIBSznKca/view)
-
+  [erd] (https://drive.google.com/file/d/1Mb6rByq6odi0hlDADz3u-50UIBSznKca/view),
+ ---
 # Wireframes :
-[main page wireframe](https://drive.google.com/file/d/1hu2UJP0LJ9gmphmFJ_wW8r58b8nPXHfi/view) 
-single page (https://drive.google.com/file/d/1wioFeukCWunqkhhqOLySSDWTJVVKxF-Q/view)
+[main page wireframe](https://drive.google.com/file/d/1hu2UJP0LJ9gmphmFJ_wW8r58b8nPXHfi/view) ,
+
+[single page] (https://drive.google.com/file/d/1wioFeukCWunqkhhqOLySSDWTJVVKxF-Q/view)
 --- 
 ## Planning and Development Process
 
