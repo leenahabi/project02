@@ -149,6 +149,13 @@ border-radius: 25px;
 object-fit: cover;
 
 }
+.noticeandalets{
+    color:#31352E;
+    text-align: center;
+    background-color:#d4f2f4;
+    line-height: 2.5;
+    margin-bottom: 10px;
+}
 
 .btn-light {
     background-color: #A7B3A5;
@@ -156,6 +163,7 @@ object-fit: cover;
     margin: 2px;
     color : white;
     min-width: 80px;
+
 }
 .newbtn{
     background-color: #A7B3A5;
