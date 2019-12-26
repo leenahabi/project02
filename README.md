@@ -27,7 +27,7 @@ This is a link to the application
 10. The user will be able to answer the question on his posts and delete them. 
 
 ### ERD
-[erd](https://drive.google.com/file/d/1Mb6rByq6odi0hlDADz3u-50UIBSznKca/view),
+[ERD](https://drive.google.com/file/d/1Mb6rByq6odi0hlDADz3u-50UIBSznKca/view),
  ---
 ### Wireframes :
 [main page wireframe](https://drive.google.com/file/d/1hu2UJP0LJ9gmphmFJ_wW8r58b8nPXHfi/view) ,
